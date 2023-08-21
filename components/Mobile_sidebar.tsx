@@ -9,6 +9,8 @@ function MobileSidebar() {
 
   const [isMounted, setIsMounted] = useState(false)
 
+   const apiLimitCount = await getApiLimitCounts();
+
 
   
 
@@ -31,7 +33,7 @@ function MobileSidebar() {
         </Button>
       </SheetTrigger>
       <SheetContent side='left' className="p-0">
-        <Sidebar />
+        <Sidebar apiLimitCount={apiLimitCount} />
       </SheetContent>
     </Sheet>
   )
