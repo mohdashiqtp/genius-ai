@@ -4,16 +4,13 @@ import { Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
 import Sidebar from './Sidebar'
 import { useState, useEffect } from 'react'
-import { getApiLimitCounts } from '@/lib/api_limit'
 
-export const MobileSidebar  =  async () => {
+function MobileSidebar ()  {
 
   const [isMounted, setIsMounted] = useState(false)
 
-   const apiLimitCount = await getApiLimitCounts();
+   const apiLimitCount = 0;
 
-
-  
 
   useEffect(() => {
 
@@ -39,3 +36,5 @@ export const MobileSidebar  =  async () => {
     </Sheet>
   )
 }
+
+export default MobileSidebar
